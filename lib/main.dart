@@ -1,6 +1,3 @@
-//We will go through flutter app flow as a skeleton here.
-//we discussed about app flow in lesson 1
-
 import 'package:flutter/material.dart';
 
 void main() {
