@@ -13,11 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
-    ); // We met the MaterialApp here
-    //wee also see the home option here
+    );
   }
 }
+//MaterialApp controls the fundamental UI design of the the app.
+//It has various kinds of properties.
+//It controls theme and color entire the app through ThemeData class
+//debugShowCheckedModeBanner: it removes debug mode banner if 'false'.
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -33,7 +37,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-//Here met the widget Scaffold
-//we also made an appbar and wrote Hello... in the body of the app.
-//Basic skeleton of our app is now ready to go with for update and edit
-// as per our requirement.
