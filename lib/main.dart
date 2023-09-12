@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp()); // Here we met main and runApp/MyApp option of the flow
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,10 +15,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//MaterialApp controls the fundamental UI design of the the app.
-//It has various kinds of properties.
-//It controls theme and color entire the app through ThemeData class
-//debugShowCheckedModeBanner: it removes debug mode banner if 'false'.
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,7 +26,17 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home'),
         backgroundColor: Colors.green,
       ),
-      body: Text('Hello!Flutter'),
+      body: Center(
+        child: Text(
+          'Hello World',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+      ),
     );
   }
 }
+//Scaffold is one of the most important widgets in Flutter
+//Most of our works are done here.
+//It contains the app's appbar, menu and body.
+//All kinds text and images can be placed here
+//Gradually, we will see our other activities here.
