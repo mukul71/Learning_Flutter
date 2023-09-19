@@ -22,8 +22,55 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('Simple Navigaion'),
+        centerTitle: false,
+        title: Text('Home'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed: () {}, child: Text("Activity 1")),
+          ElevatedButton(onPressed: () {}, child: Text("Activity 2")),
+        ],
+      ),
+    );
+  }
+}
+
+class Activity1 extends StatelessWidget {
+  const Activity1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Activity 1'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed: () {}, child: Text("Home")),
+          ElevatedButton(onPressed: () {}, child: Text("Activity 2")),
+        ],
+      ),
+    );
+  }
+}
+
+class Activity2 extends StatelessWidget {
+  const Activity2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Activity 2'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed: () {}, child: Text("Home")),
+          ElevatedButton(onPressed: () {}, child: Text("Activity 1")),
+        ],
       ),
     );
   }
