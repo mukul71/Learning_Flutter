@@ -28,6 +28,10 @@ class HomePage extends StatelessWidget {
     {"image": "https://rabbil.com/files/mernS.png", "title": "Nazmul"},
     {"image": "https://rabbil.com/files/mernS.png", "title": "Ali"},
   ];
+  mySnackBar(context, msg) {
+    return ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(msg)));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,9 @@ class HomePage extends StatelessWidget {
           itemCount: myItems.length,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {},
+              onTap: () {
+                mySnackBar(context, myItems[index]["title"]);
+              },
               child: Container(
                 margin: EdgeInsets.all(10),
                 width: double.infinity,
