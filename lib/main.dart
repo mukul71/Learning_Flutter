@@ -20,87 +20,40 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        title: Text('Home'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Activity1()));
-              },
-              child: Text("Activity 1")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Activity2()));
-              },
-              child: Text("Activity 2")),
-        ],
-      ),
-    );
-  }
-}
-
-class Activity1 extends StatelessWidget {
-  const Activity1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Activity 1'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
-              },
-              child: Text("Home")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Activity2()));
-              },
-              child: Text("Activity 2")),
-        ],
-      ),
-    );
-  }
-}
-
-class Activity2 extends StatelessWidget {
-  const Activity2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Activity 2'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
-              },
-              child: Text("Home")),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Activity1()));
-              },
-              child: Text("Activity 1")),
-        ],
+    return DefaultTabController(
+      length: 8,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Home'),
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.home),
+              ),
+              Tab(
+                icon: Icon(Icons.mail),
+              ),
+              Tab(
+                icon: Icon(Icons.settings),
+              ),
+              Tab(
+                icon: Icon(Icons.search),
+              ),
+              Tab(
+                icon: Icon(Icons.comment),
+              ),
+              Tab(
+                icon: Icon(Icons.wallet),
+              ),
+              Tab(
+                icon: Icon(Icons.card_travel),
+              ),
+              Tab(
+                icon: Icon(Icons.account_balance),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
