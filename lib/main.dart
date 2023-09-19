@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'Fragments/AccountFragment.dart';
+import 'Fragments/AlarmFragment.dart';
+import 'Fragments/CardFragment.dart';
+import 'Fragments/HomeFragment.dart';
+import 'Fragments/MailFragment.dart';
+import 'Fragments/SearchFragment.dart';
+import 'Fragments/SettingsFragment.dart';
+import 'Fragments/WalletFragment.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -77,6 +86,18 @@ class HomePage extends StatelessWidget {
         //     Text('7', style: TextStyle(color: Colors.indigo)),
         //   ],
         // ),
+        body: TabBarView(
+          children: [
+            HomeFragment(),
+            MailFragment(),
+            SettingsFragment(),
+            SearchFragment(),
+            AlarmFragment(),
+            WalletFragment(),
+            CardFragment(),
+            AccountFragment()
+          ],
+        ),
       ),
     );
   }
