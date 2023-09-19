@@ -43,9 +43,9 @@ class HomePage extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.all(10),
                 width: double.infinity,
-                height: 200,
+                height: 250,
                 child: Image.network(
-                  myItems[index]['img']!,
+                  myItems[index]['image']!,
                   fit: BoxFit.fill,
                 ),
               ),
