@@ -28,8 +28,18 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          ElevatedButton(onPressed: () {}, child: Text("Activity 1")),
-          ElevatedButton(onPressed: () {}, child: Text("Activity 2")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Activity1()));
+              },
+              child: Text("Activity 1")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Activity2()));
+              },
+              child: Text("Activity 2")),
         ],
       ),
     );
@@ -48,8 +58,18 @@ class Activity1 extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          ElevatedButton(onPressed: () {}, child: Text("Home")),
-          ElevatedButton(onPressed: () {}, child: Text("Activity 2")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
+              child: Text("Home")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Activity2()));
+              },
+              child: Text("Activity 2")),
         ],
       ),
     );
@@ -68,8 +88,18 @@ class Activity2 extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          ElevatedButton(onPressed: () {}, child: Text("Home")),
-          ElevatedButton(onPressed: () {}, child: Text("Activity 1")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
+              child: Text("Home")),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Activity1()));
+              },
+              child: Text("Activity 1")),
         ],
       ),
     );
