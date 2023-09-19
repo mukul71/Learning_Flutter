@@ -63,20 +63,20 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
-          children: [
-            Text(
-              '1',
-              style: TextStyle(color: Colors.red),
-            ),
-            Text('2', style: TextStyle(color: Colors.green)),
-            Text('3', style: TextStyle(color: Colors.purpleAccent)),
-            Text('4', style: TextStyle(color: Colors.amber)),
-            Text('5', style: TextStyle(color: Colors.deepOrange)),
-            Text('6', style: TextStyle(color: Colors.limeAccent)),
-            Text('7', style: TextStyle(color: Colors.indigo)),
-          ],
-        ),
+        // body: TabBarView(
+        //   children: [
+        //     Text(
+        //       '1',
+        //       style: TextStyle(color: Colors.red),
+        //     ),
+        //     Text('2', style: TextStyle(color: Colors.green)),
+        //     Text('3', style: TextStyle(color: Colors.purpleAccent)),
+        //     Text('4', style: TextStyle(color: Colors.amber)),
+        //     Text('5', style: TextStyle(color: Colors.deepOrange)),
+        //     Text('6', style: TextStyle(color: Colors.limeAccent)),
+        //     Text('7', style: TextStyle(color: Colors.indigo)),
+        //   ],
+        // ),
       ),
     );
   }
