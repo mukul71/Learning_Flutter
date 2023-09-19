@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Home'),
           bottom: TabBar(
+            isScrollable: true,
             tabs: [
               Tab(
                 icon: Icon(Icons.home),
