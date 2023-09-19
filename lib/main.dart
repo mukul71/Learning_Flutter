@@ -35,6 +35,22 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('List View Builder'),
       ),
+      body: ListView.builder(
+          itemCount: myItems.length,
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {},
+              child: Container(
+                margin: EdgeInsets.all(10),
+                width: double.infinity,
+                height: 200,
+                child: Image.network(
+                  myItems[index]['img']!,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            );
+          }),
     );
   }
 }
