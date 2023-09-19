@@ -29,27 +29,35 @@ class HomePage extends StatelessWidget {
             tabs: [
               Tab(
                 icon: Icon(Icons.home),
+                text: 'Home',
               ),
               Tab(
                 icon: Icon(Icons.mail),
+                text: 'Mail',
               ),
               Tab(
                 icon: Icon(Icons.settings),
+                text: 'Settings',
               ),
               Tab(
                 icon: Icon(Icons.search),
+                text: 'Search',
               ),
               Tab(
-                icon: Icon(Icons.comment),
+                icon: Icon(Icons.alarm),
+                text: 'Alarm',
               ),
               Tab(
                 icon: Icon(Icons.wallet),
+                text: 'Wallet',
               ),
               Tab(
                 icon: Icon(Icons.card_travel),
+                text: 'Card',
               ),
               Tab(
                 icon: Icon(Icons.account_balance),
+                text: 'Account',
               ),
             ],
           ),
