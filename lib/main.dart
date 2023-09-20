@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             elevation: 10,
             shadowColor: Colors.pink),
         textTheme: TextTheme(
-          bodyMedium: TextStyle(fontSize: 18),
+          bodyMedium: TextStyle(fontSize: 18), //default font size 14
         ),
       ),
     );
