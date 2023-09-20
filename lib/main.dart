@@ -21,6 +21,30 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home: Data Pass'),
       ),
+      body: ElevatedButton(
+        onPressed: () {},
+        child: Text('Go to ProductPage'),
+      ),
+    );
+  }
+}
+
+class ProductPage extends StatelessWidget {
+  const ProductPage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Product Page'),
+      ),
+      body: ListView.builder(
+        itemCount: 50,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(index.toString()),
+          );
+        },
+      ),
     );
   }
 }
