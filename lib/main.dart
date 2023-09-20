@@ -13,8 +13,13 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.purple,
+              padding: EdgeInsets.all(20),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15))),
         ),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.pinkAccent),
       ),
     );
   }
@@ -33,7 +38,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text('Tap Here')),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Tap Here'),
+            ),
             TextButton(onPressed: () {}, child: Text('Tap Here')),
           ],
         ),
