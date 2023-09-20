@@ -44,9 +44,32 @@ class ProductPage extends StatelessWidget {
         itemCount: 50,
         itemBuilder: (context, index) {
           return ListTile(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ProductDetailPage(productName: index.toString())));
+            },
             title: Text(index.toString()),
           );
         },
+      ),
+    );
+  }
+}
+
+class ProductDetailPage extends StatelessWidget {
+  final productName;
+  const ProductDetailPage({super.key, required this.productName});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Product Detail Page'),
+      ),
+      body: Center(
+        child: Text(productName),
       ),
     );
   }
