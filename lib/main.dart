@@ -22,7 +22,10 @@ class HomePage extends StatelessWidget {
         title: Text('Home: Data Pass'),
       ),
       body: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ProductPage()));
+        },
         child: Text('Go to ProductPage'),
       ),
     );
