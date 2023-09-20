@@ -19,7 +19,13 @@ class MyApp extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15))),
         ),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.pinkAccent),
+        appBarTheme: AppBarTheme(
+            backgroundColor: Colors.pinkAccent,
+            elevation: 10,
+            shadowColor: Colors.pink),
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(fontSize: 18),
+        ),
       ),
     );
   }
