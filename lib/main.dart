@@ -22,6 +22,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Theme Data'),
       ),
+      body: Column(
+        children: [
+          ElevatedButton(onPressed: () {}, child: Text('Tap Here')),
+          TextButton(onPressed: () {}, child: Text('Tap Here')),
+        ],
+      ),
     );
   }
 }
