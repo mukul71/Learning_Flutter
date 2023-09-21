@@ -22,15 +22,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aspect Ratio'),
+        title: Text('Fractional Sized Box'),
       ),
-      body: Container(
-        width: double.infinity,
-        height: 300,
-        color: Colors.pink,
-        alignment: Alignment.center,
-        child: AspectRatio(
-          aspectRatio: 16 / 9,
+      body: Center(
+        child: FractionallySizedBox(
+          heightFactor: 0.3,
+          widthFactor: 0.5,
           child: Container(
             color: Colors.green,
           ),
