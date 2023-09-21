@@ -24,14 +24,8 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Fractional Sized Box'),
       ),
-      body: Center(
-        child: FractionallySizedBox(
-          heightFactor: 0.3,
-          widthFactor: 0.5,
-          child: Container(
-            color: Colors.green,
-          ),
-        ),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {},
       ),
     );
   }
