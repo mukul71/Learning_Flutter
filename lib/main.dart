@@ -21,55 +21,32 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Fractional Sized Box'),
-        ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.green,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.red,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.blue,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.purple,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.orange,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.pink,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.limeAccent,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.deepPurple,
-              ),
-            ],
+      appBar: AppBar(
+        title: Text('Expanded'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 25,
+            child: Container(
+              color: Colors.lime,
+            ),
           ),
-        ));
+          Expanded(
+            flex: 20,
+            child: Container(
+              color: Colors.orange,
+            ),
+          ),
+          Expanded(
+            flex: 15,
+            child: Container(
+              color: Colors.deepOrange,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
