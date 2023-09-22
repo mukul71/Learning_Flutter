@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flexible'),
       ),
-      body: Column(
+      body: Row(
         //we can use Row inplace of column
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
