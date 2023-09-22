@@ -28,7 +28,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Media Query'),
       ),
-      //body:
+      body: Column(
+        children: [
+          Text('Screen Width ${width}'),
+          Text('Screen Height ${height}'),
+          Text('Screen Orientation ${orientation}'),
+        ],
+      ),
     );
   }
 }
