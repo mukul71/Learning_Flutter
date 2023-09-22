@@ -28,19 +28,19 @@ class HomePage extends StatelessWidget {
         //we can use Row inplace of column
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Expanded(
+          Flexible(
             flex: 25,
             child: Container(
               color: Colors.lime,
             ),
           ),
-          Expanded(
+          Flexible(
             flex: 20,
             child: Container(
               color: Colors.orange,
             ),
           ),
-          Expanded(
+          Flexible(
             flex: 15,
             child: Container(
               color: Colors.deepOrange,
