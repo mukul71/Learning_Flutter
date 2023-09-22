@@ -20,9 +20,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    var orientation = MediaQuery.of(context).orientation;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flexible'),
+        title: Text('Media Query'),
       ),
       body:
     );
