@@ -29,27 +29,78 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Responsive Grid'),
       ),
-      body: ResponsiveGridRow(
-        children: [
-          ResponsiveGridCol(
-            lg: 12,
-            child: Container(
-              height: 100,
-              color: Colors.deepOrange,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: ResponsiveGridRow(
+          children: [
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.deepOrange,
+              ),
             ),
-          ),
-          ResponsiveGridCol(
-            xs: 12,
-            sm: 9,
-            md: 8,
-            lg: 6,
-            xl: 4,
-            child: Container(
-              height: 100,
-              color: Colors.deepOrange,
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.pink,
+              ),
             ),
-          ),
-        ],
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.lightGreenAccent,
+              ),
+            ),
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.orange,
+              ),
+            ),
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.red,
+              ),
+            ),
+            ResponsiveGridCol(
+              xs: 12,
+              sm: 6,
+              md: 4,
+              lg: 3,
+              xl: 2,
+              child: Container(
+                height: 100,
+                color: Colors.blue,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
