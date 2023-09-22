@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,29 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Media Query'),
+        title: Text('Responsive Grid'),
+      ),
+      body: ResponsiveGridRow(
+        children: [
+          ResponsiveGridCol(
+            lg: 12,
+            child: Container(
+              height: 100,
+              color: Colors.deepOrange,
+            ),
+          ),
+          ResponsiveGridCol(
+            xs: 12,
+            sm: 9,
+            md: 8,
+            lg: 6,
+            xl: 4,
+            child: Container(
+              height: 100,
+              color: Colors.deepOrange,
+            ),
+          ),
+        ],
       ),
     );
   }
