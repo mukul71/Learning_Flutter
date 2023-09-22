@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanded'),
+        title: Text('Flexible'),
       ),
       body: Column(
         //we can use Row inplace of column
