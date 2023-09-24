@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/Style.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,8 +36,12 @@ class HomePageView extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text("Sum is = "),
-            TextFormField(),
-            TextFormField(),
+            TextFormField(
+              decoration: AppInputs(),
+            ),
+            TextFormField(
+              decoration: AppInputs(),
+            ),
             Container(
                 child: ElevatedButton(
               child: Text('Add'),
