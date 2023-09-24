@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_grid/responsive_grid.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,91 +15,34 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomePageUi();
+  }
+}
 
+class HomePageUi extends State<HomePage> {
+  int countNumber = 0;
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
-    var orientation = MediaQuery.of(context).orientation;
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Responsive Grid'),
+        title: Text('Counting App'),
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: ResponsiveGridRow(
-          children: [
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.deepOrange,
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.pink,
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.lightGreenAccent,
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.orange,
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.red,
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 12,
-              sm: 6,
-              md: 4,
-              lg: 3,
-              xl: 2,
-              child: Container(
-                height: 100,
-                color: Colors.blue,
-              ),
-            ),
-          ],
+      body: Center(
+        child: Text(
+          countNumber.toString(),
+          style: TextStyle(fontSize: 25),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            countNumber += 1;
+          });
+        },
       ),
     );
   }
