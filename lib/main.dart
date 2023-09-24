@@ -32,7 +32,17 @@ class HomePageView extends State<HomePage> {
       body: Padding(
         padding: EdgeInsets.all(30),
         child: Column(
-          children: [],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("Sum is = "),
+            TextFormField(),
+            TextFormField(),
+            Container(
+                child: ElevatedButton(
+              child: Text('Add'),
+              onPressed: () {},
+            )),
+          ],
         ),
       ),
     );
