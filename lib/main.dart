@@ -35,7 +35,10 @@ class HomePageView extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Sum is = "),
+            Text(
+              "Sum is = ",
+              style: HeadStyle(),
+            ),
             SizedBox(
               height: 20,
             ),
