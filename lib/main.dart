@@ -1,64 +1,99 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter/Style.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: const CounterScreen(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
+class CounterScreen extends StatefulWidget {
+  const CounterScreen({Key? key}) : super(key: key);
+
   @override
-  State<StatefulWidget> createState() {
-    return HomePageView();
-  }
+  _CounterScreenState createState() => _CounterScreenState();
 }
 
-class HomePageView extends State<HomePage> {
+class _CounterScreenState extends State<CounterScreen> {
+  int count = 0;
+
+  void _incrementCount() {
+    setState(() {
+      count++;
+      if (count >= 5) {
+        _showDialog();
+      }
+    });
+  }
+
+  void _decrementCount() {
+    setState(() {
+      if (count > 0) {
+        count--;
+      }
+    });
+  }
+
+  Future<void> _showDialog() async {
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Button Pressed'),
+          content: Text('Button pressed $count times.'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Numbers App'),
+        title: const Text('Counter App'),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(30),
+      body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
             Text(
-              "Sum is = ",
-              style: HeadStyle(),
+              'Count:',
+              style: TextStyle(fontSize: 24),
             ),
-            SizedBox(
-              height: 20,
+            Text(
+              '$count',
+              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
-            TextFormField(
-              decoration: AppInputs('First Number'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: _incrementCount,
+                  child: const Text('+'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: _decrementCount,
+                  child: const Text('-'),
+                ),
+              ],
             ),
-            SizedBox(
-              height: 20,
-            ),
-            TextFormField(
-              decoration: AppInputs('Second Number'),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-                child: ElevatedButton(
-              child: Text('Add'),
-              onPressed: () {},
-            )),
           ],
         ),
       ),
