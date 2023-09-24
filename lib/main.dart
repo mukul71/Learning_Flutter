@@ -36,11 +36,20 @@ class HomePageView extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text("Sum is = "),
-            TextFormField(
-              decoration: AppInputs(),
+            SizedBox(
+              height: 20,
             ),
             TextFormField(
-              decoration: AppInputs(),
+              decoration: AppInputs('First Number'),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              decoration: AppInputs('Second Number'),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Container(
                 child: ElevatedButton(
