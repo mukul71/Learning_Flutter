@@ -25,6 +25,16 @@ class HomePage extends StatefulWidget {
 class HomePageView extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Add Numbers App'),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
   }
 }
