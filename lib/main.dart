@@ -18,32 +18,13 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return HomePageUi();
+    return HomePageView();
   }
 }
 
-class HomePageUi extends State<HomePage> {
-  int countNumber = 0;
+class HomePageView extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Counting App'),
-      ),
-      body: Center(
-        child: Text(
-          countNumber.toString(),
-          style: TextStyle(fontSize: 25),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            countNumber += 1;
-          });
-        },
-      ),
-    );
+    return Scaffold();
   }
 }
