@@ -6,6 +6,10 @@ InputDecoration AppInputs(label) {
     filled: true,
     fillColor: Colors.green,
     border: OutlineInputBorder(),
-    label: label,
+    labelText: label,
   );
+}
+
+TextStyle HeadStyle() {
+  return TextStyle(fontSize: 20, fontWeight: FontWeight.w500);
 }
