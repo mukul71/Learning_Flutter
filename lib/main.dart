@@ -24,8 +24,16 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageView extends State<HomePage> {
+  Map<String, String> formValue = {"Num1": "", "Num2": "", "Num3": ""};
+
   @override
   Widget build(BuildContext context) {
+    inputChangedValue(inputKey, inputValue) {
+      setState(() {
+        formValue.update(inputKey, (value) => inputValue);
+      });
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Add Numbers App'),
@@ -43,13 +51,22 @@ class HomePageView extends State<HomePage> {
               height: 20,
             ),
             TextFormField(
+              onChanged: (value) {},
               decoration: AppInputs('First Number'),
             ),
             SizedBox(
               height: 20,
             ),
             TextFormField(
+              onChanged: (value) {},
               decoration: AppInputs('Second Number'),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              onChanged: (value) {},
+              decoration: AppInputs('Third Number'),
             ),
             SizedBox(
               height: 20,
