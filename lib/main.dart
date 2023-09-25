@@ -51,21 +51,27 @@ class HomePageView extends State<HomePage> {
               height: 20,
             ),
             TextFormField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                inputChangedValue("Num1", value);
+              },
               decoration: AppInputs('First Number'),
             ),
             SizedBox(
               height: 20,
             ),
             TextFormField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                inputChangedValue("Num2", value);
+              },
               decoration: AppInputs('Second Number'),
             ),
             SizedBox(
               height: 20,
             ),
             TextFormField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                inputChangedValue("Num3", value);
+              },
               decoration: AppInputs('Third Number'),
             ),
             SizedBox(
