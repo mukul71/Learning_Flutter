@@ -9,6 +9,8 @@ class Todo extends StatefulWidget {
 }
 
 class todoView extends State<Todo> {
+  List todoList = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
