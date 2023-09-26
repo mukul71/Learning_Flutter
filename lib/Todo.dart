@@ -15,6 +15,12 @@ class todoView extends State<Todo> {
       appBar: AppBar(
         title: Text('To Do App'),
       ),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [Expanded(child: child)],
+        ),
+      ),
     );
   }
 }
