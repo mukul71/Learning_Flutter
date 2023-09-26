@@ -18,7 +18,26 @@ class todoView extends State<Todo> {
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(
-          children: [Expanded(child: child)],
+          children: [
+            Expanded(
+              flex: 10,
+              child: Row(
+                children: [
+                  Expanded(child: TextFormField()),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Add'),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Text('ListView'),
+              flex: 90,
+            ),
+          ],
         ),
       ),
     );
