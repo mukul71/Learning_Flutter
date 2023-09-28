@@ -9,7 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomePage());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(primarySwatch: Colors.green),
+        home: HomePage());
   }
 }
 
@@ -28,113 +31,23 @@ class HomeView extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Calculator'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('1'),
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(15),
-                ),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('2'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('3'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('+'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-            ],
+        backgroundColor: Colors.black54,
+        leading: Icon(
+          Icons.settings,
+          color: Colors.orange,
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(top: 18.0),
+            child: Text(
+              'Deg',
+              style:
+                  TextStyle(color: Colors.white38, fontWeight: FontWeight.bold),
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('4'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('5'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('6'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('-'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('7'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('8'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('9'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('/'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('0'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('='),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('%'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('*'),
-                style: ElevatedButton.styleFrom(padding: EdgeInsets.all(15)),
-              ),
-            ],
-          ),
+          SizedBox(
+            width: 20,
+          )
         ],
       ),
     );
