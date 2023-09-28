@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter/Todo.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,10 +9,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'To Do',
-      theme: ThemeData(primaryColor: Colors.green),
-      home: Todo(),
-    );
+    return MaterialApp(home: HomePage());
+  }
+}
+
+//Widget class
+
+class HomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomeView();
+  }
+}
+//creating State Class
+
+class HomeView extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
   }
 }
