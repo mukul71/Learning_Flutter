@@ -1,3 +1,4 @@
+//https://syntax007.hashnode.dev/a-step-by-step-guide-to-creating-a-basic-calculator-app-in-flutter
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,12 +22,20 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return HomeView();
+    return calculatorViewState();
   }
 }
 //creating State Class
 
-class HomeView extends State<HomePage> {
+class calculatorViewState extends State<HomePage> {
+  String equation = "0";
+  String result = "0";
+  String expression = "0";
+  double equationFontSize = 38.0;
+  double resultFontSize = 48.0;
+
+  buttonPressed(String buttonText) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +58,19 @@ class HomeView extends State<HomePage> {
             width: 20,
           )
         ],
+      ),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Align(
+              alignment: Alignment.bottomRight,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
