@@ -74,12 +74,18 @@ class calculatorViewState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           child: Text(
                             result,
                             textAlign: TextAlign.left,
-                            style: TextStyle(color: Colors.white, fontSize: 80),
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 80),
                           ),
+                        ),
+                        const Icon(Icons.more_vert,
+                            color: Colors.orange, size: 30),
+                        const SizedBox(
+                          width: 20,
                         )
                       ],
                     ),
