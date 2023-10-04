@@ -126,6 +126,75 @@ class calculatorViewState extends State<HomePage> {
                 calcButton("X", Colors.white10, () => buttonPressed("X")),
               ],
             ),
+            const SizedBox(
+              width: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                calcButton("7", Colors.white24, () => buttonPressed('7')),
+                calcButton('8', Colors.white24, () => buttonPressed('8')),
+                calcButton('9', Colors.white24, () => buttonPressed('9')),
+                calcButton('-', Colors.white24, () => buttonPressed('-'))
+              ],
+            ),
+            const SizedBox(width: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                calcButton('4', Colors.white24, () => buttonPressed('4')),
+                calcButton('5', Colors.white24, () => buttonPressed('5')),
+                calcButton('6', Colors.white24, () => buttonPressed('6')),
+                calcButton('+', Colors.white24, () => buttonPressed('+')),
+              ],
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        calcButton(
+                            '1', Colors.white24, () => buttonPressed('1')),
+                        SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.04),
+                        calcButton(
+                            '2', Colors.white24, () => buttonPressed('2')),
+                        SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.04),
+                        calcButton(
+                            '3', Colors.white24, () => buttonPressed('3')),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        calcButton(
+                            '+/', Colors.white24, () => buttonPressed('+/')),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.04,
+                        ),
+                        calcButton(
+                            '0', Colors.white24, () => buttonPressed('0')),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * .04,
+                        ),
+                        calcButton(
+                            '.', Colors.white24, () => buttonPressed('.'))
+                      ],
+                    ),
+                  ],
+                ),
+                calcButton('=', Colors.orange, () => buttonPressed('=')),
+              ],
+            ),
           ],
         ),
       ),
