@@ -103,13 +103,13 @@ class calculatorViewState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    IconButton(
-                      icon: const Icon(Icons.backspace_outlined,
-                          color: Colors.orange, size: 30),
-                      onPressed: () {
-                        buttonPressed(("⌫"));
-                      },
-                    ),
+                    // IconButton(
+                    //   icon: const Icon(Icons.backspace_outlined,
+                    //       color: Colors.orange, size: 30),
+                    //   onPressed: () {
+                    //     buttonPressed(("⌫"));
+                    //   },
+                    // ),
                     const SizedBox(
                       width: 20,
                     ),
