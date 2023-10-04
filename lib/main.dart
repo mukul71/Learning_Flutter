@@ -86,8 +86,11 @@ class calculatorViewState extends State<HomePage> {
                             color: Colors.orange, size: 30),
                         const SizedBox(
                           width: 20,
-                        )
+                        ),
                       ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                     ),
                   ],
                 ),
