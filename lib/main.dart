@@ -91,6 +91,23 @@ class calculatorViewState extends State<HomePage> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Text(
+                            equation,
+                            style:
+                                TextStyle(fontSize: 40, color: Colors.white38),
+                          ),
+                        ),
+                      ],
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.backspace_outlined,
+                          color: Colors.orange, size: 30),
+                      onPressed: () {
+                        buttonPressed(("⌫"));
+                      },
                     ),
                   ],
                 ),
