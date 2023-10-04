@@ -1,5 +1,6 @@
 //https://syntax007.hashnode.dev/a-step-by-step-guide-to-creating-a-basic-calculator-app-in-flutter
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/calcButton.dart';
 
 void main() {
   runApp(MyApp());
@@ -109,9 +110,21 @@ class calculatorViewState extends State<HomePage> {
                         buttonPressed(("⌫"));
                       },
                     ),
+                    const SizedBox(
+                      width: 20,
+                    ),
                   ],
                 ),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                calcButton('AC', Colors.white10, () => buttonPressed("Ac")),
+                calcButton("%", Colors.white10, () => buttonPressed("%")),
+                calcButton("÷", Colors.white10, () => buttonPressed("÷")),
+                calcButton("X", Colors.white10, () => buttonPressed("X")),
+              ],
             ),
           ],
         ),
