@@ -67,6 +67,24 @@ class calculatorViewState extends State<HomePage> {
               alignment: Alignment.bottomRight,
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            result,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color: Colors.white, fontSize: 80),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
